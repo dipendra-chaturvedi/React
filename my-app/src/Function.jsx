@@ -19,19 +19,19 @@ function Function() {
   return (
     <>
       <div className="test">Functionl Component</div>
-      <div>
-        <h1>{getName1(title)}</h1>
-        <h2>{getName1(game1)}</h2>
-        <h2>{getName1(game2)}</h2>
-        <h2>{getName1(game3)}</h2>
-        <h2>{getName1(game4)}</h2>
+      <div className="div">
+        <h2>{getName1(title)}</h2>
+        <h3>{getName1(game1)}</h3>
+        <h3>{getName1(game2)}</h3>
+        <h3>{getName1(game3)}</h3>
+        <h3>{getName1(game4)}</h3>
       </div>
-      <div>
-        <h1>{getName2(title)}</h1>
-        <h2>{getName2(game1)}</h2>
-        <h2>{getName2(game2)}</h2>
-        <h2>{getName2(game3)}</h2>
-        <h2>{getName2(game4)}</h2>
+      <div className="div">
+        <h2>{getName2(title)}</h2>
+        <h3>{getName2(game1)}</h3>
+        <h3>{getName2(game2)}</h3>
+        <h3>{getName2(game3)}</h3>
+        <h3>{getName2(game4)}</h3>
       </div>
     </>
   );

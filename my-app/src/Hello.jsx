@@ -11,6 +11,8 @@ const Hello = () => {
         borderRadius: '5px',
         textAlign: 'center'
       } 
+
+    
      
   return (
     <>
@@ -18,6 +20,7 @@ const Hello = () => {
       <div>
         <h1 className={styles.test}>Andrul</h1>
       </div>
+      
       <div>
         <img src={reactLogo} width="200px"/>
       </div> 
