@@ -2,17 +2,21 @@ import { useState } from 'react';
 
 function BasicValidationForm() {
 
-  const [name, setName] = useSate("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!name || !email) {
-      setErrors("")
-      console.log("Form Submitted :", {name, email})
-    } 
-  
+      setErrors("All fields are required");
+    }else {
+      setErrors("");
+      console.log("Form Submitted Successfully");
+      console.log("Form Submitted :", {name, email});
+      setSuccess("Submited Successfully");
+    }
   }
 
   return (
@@ -30,8 +34,12 @@ function BasicValidationForm() {
             type="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
+          <br />
+          <p>{errors && <span style={{color:"red"}}>{errors}</span>}</p>
+          
+          {success && <span style={{color:"green"}}>{success}</span>}
           <br />
           <br />
           <button type="submit">Submit</button>
